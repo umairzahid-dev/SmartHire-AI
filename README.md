@@ -1,142 +1,96 @@
-# SmartHire AI - Resume Screening System
+# SmartHire AI
+
+An AI Resume Screening & Candidate Ranking System built using TF-IDF and Cosine Similarity.
+
+**Live Application:**  
+https://smarthireats.streamlit.app/
+
+---
 
 ## Overview
 
-SmartHire AI is a Resume Screening and Candidate Ranking System that automates the initial candidate evaluation process.
+SmartHire AI helps recruiters and hiring teams quickly identify the most relevant candidates by comparing uploaded resumes against a job description.
 
-The system leverages Natural Language Processing (NLP), TF-IDF Vectorization, and Cosine Similarity to compare resumes against a job description and rank candidates based on relevance.
-
-The objective is to streamline resume screening and assist recruiters in identifying the most suitable candidates efficiently.
+The system uses Natural Language Processing (NLP), TF-IDF Vectorization, and Cosine Similarity to rank candidates based on textual relevance.
 
 ---
 
 ## Features
 
-* Resume preprocessing and text normalization
-* TF-IDF based document representation
-* Cosine similarity based candidate ranking
-* Multiple resume support
-* PDF resume text extraction
-* Automated resume ranking pipeline
-* Deployment-ready architecture
+- Upload multiple PDF resumes
+- Paste any job description
+- Automatic PDF text extraction
+- Resume ranking based on relevance
+- TF-IDF vectorization
+- Cosine Similarity matching
+- Interactive Streamlit dashboard
+- Real-time candidate analysis
+- Modern Glassmorphism UI
+
+---
+
+## Tech Stack
+
+### Machine Learning & NLP
+- Python
+- Scikit-Learn
+- TF-IDF Vectorizer
+- Cosine Similarity
+
+### Data Processing
+- Pandas
+- NumPy
+- PyMuPDF
+
+### Frontend
+- Streamlit
 
 ---
 
 ## Project Workflow
 
-```text
-Job Description
-        │
-        ▼
-Text Preprocessing
-        │
-        ▼
-TF-IDF Transformation
-        │
-        ▼
-Cosine Similarity
-        │
-        ▼
-Candidate Ranking
-        │
-        ▼
-Top Matching Resumes
-```
+1. Upload one or more resumes.
+2. Enter a job description.
+3. Resume text is extracted from PDF files.
+4. Text is cleaned and processed.
+5. TF-IDF converts text into numerical vectors.
+6. Cosine Similarity compares resumes with the job description.
+7. Candidates are ranked by relevance score.
+8. Results are displayed in an interactive dashboard.
 
 ---
 
-## Technologies Used
+## How It Works
 
-### Programming Language
+### TF-IDF Vectorization
 
-* Python
+TF-IDF (Term Frequency–Inverse Document Frequency) converts text into numerical vectors.
 
-### Libraries
+- Important keywords receive higher weights.
+- Common words receive lower weights.
+- Helps identify meaningful skills and job-related terms.
 
-* Pandas
-* NumPy
-* Scikit-learn
-* PyMuPDF
-* Joblib
-* Regular Expressions (re)
+### Cosine Similarity
 
-### Machine Learning Techniques
+Cosine Similarity measures how similar two text vectors are.
 
-* TF-IDF Vectorization
-* Cosine Similarity
+- Score near **1.0** → Strong Match
+- Score near **0.0** → Weak Match
 
----
-
-## Project Structure
-
-```text
-SmartHire-AI/
-
-├── data/
-│   ├── clean_resumes.csv
-│   └── clean_jobs.csv
-│
-├── models/
-│   └── tfidf.pkl
-│
-├── notebooks/
-│   └── SmartHire.ipynb
-│
-├── app/
-│   └── app.py
-│
-├── requirements.txt
-│
-└── README.md
-```
+Each uploaded resume is compared with the job description, and candidates are ranked accordingly.
 
 ---
 
-## Installation
+## Future Improvements
 
-```bash
-git clone https://github.com/your-username/SmartHire-AI.git
-
-cd SmartHire-AI
-
-pip install -r requirements.txt
-```
-
----
-
-## Usage
-
-1. Upload one or more resume PDFs.
-2. Provide a job description.
-3. Calculate similarity scores.
-4. Rank candidates based on relevance.
-
----
-
-## Future Enhancements
-
-* Skill matching module
-* Missing skill detection
-* Candidate insights dashboard
-* FastAPI integration
-* Advanced NLP-based candidate analysis
-
----
-
-## Learning Outcomes
-
-This project demonstrates:
-
-* Text preprocessing and normalization
-* Feature engineering using TF-IDF
-* Similarity-based document ranking
-* Resume screening workflows
-* Model persistence using Joblib
-* End-to-end machine learning pipeline development
+- Skills Extraction
+- Missing Skills Detection
+- ATS Score Analysis
+- Resume Categorization
+- FastAPI Integration
+- Recruiter Dashboard
 
 ---
 
 ## Author
-
 **Umair Zahid**
-
