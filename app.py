@@ -343,7 +343,7 @@ h1,h2,h3,h4,h5,h6{
 
 @st.cache_resource
 def load_model():
-    return joblib.load("models/tfidf.pkl")
+    return joblib.load("tfidf.pkl")
 
 tfidf = load_model()
 
